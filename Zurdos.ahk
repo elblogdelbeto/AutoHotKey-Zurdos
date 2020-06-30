@@ -24,29 +24,13 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 	
 <!ñ::!Tab			;Alt + l = Alt + Tab
 
-$f1::^q
-$f2::^w
-$f3::^e
-$f4::^y
-$f5::^z
-$f6::^x
-$f7::^c
-$f8::^v
+
 $f9::#v
 $f10::^f
 ^f10::f3
 $f11::^a
 $f12::^s
 
-+f1::SendInput, {f1}
-+f2::SendInput, {f2}
-+f3::SendInput, {f3}
-+f4::SendInput, {f4}
-+!f4::SendInput, !{f4}
-+f5::SendInput, {f5}
-+f6::SendInput, {f6}
-+f7::SendInput, {f7}
-+f8::SendInput, {f8}
 +f9::SendInput, {f9}
 +f10::SendInput, {f10}
 +f11::SendInput, {f11}
