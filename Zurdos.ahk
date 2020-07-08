@@ -19,22 +19,21 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 +Insert::Send ^v
 +Delete::Send ^x
 
-!Backspace::Send ^z	 	;Alt + BackSpace = ctrl + z 
-!+Backspace::Send ^+z 		;Alt + shift + BackSpace = ctrl + shift + Z
+!Backspace::SendInput ^z	 	;Alt + BackSpace = ctrl + z 
+!+Backspace::SendInput ^+z 		;Alt + shift + BackSpace = ctrl + shift + Z
 	
-<!ñ::!Tab			;Alt + l = Alt + Tab
+!ñ::!Tab 		;Alt + l = Alt + Tab
 
 
-$f9::#v
-$f10::^f
-^f10::f3
-$f11::^a
-$f12::^s
++f9::SendInput, #v
++f10::SendInput, ^f
++f11::SendInput, ^a
++f12::SendInput, ^s
 
-+f9::SendInput, {f9}
-+f10::SendInput, {f10}
-+f11::SendInput, {f11}
-+f12::SendInput, {f12}
+;+f9::SendInput, {f9}
+;+f10::SendInput, {f10}
+;+f11::SendInput, {f11}
+;+f12::SendInput, {f12}
 
 ScrollLock::#d	; teclaBloq = mostrar escritorio
 Pause::#e	; teclaPausa = abrir exolorador de carpetas
@@ -54,8 +53,8 @@ NumpadUp::^!Tab		;numero 8 del numerico =
 NumpadPgUP::^Tab	;numero 9 del numerico = ctrl + tab = moverse entre tabs enfrente
 	
 NumpadDiv::Run "Chrome.exe"	  ;/ del numerico = deshacer
-NumpadMult::Run Notepad 	  ;* del numerico = rehacer
-NumpadSub::Run "calc.exe" 	  ;- del numerico = rehacer2
+NumpadMult::Run "Chrome.exe"	  ;* del numerico = rehacer
+NumpadSub::Run Notepad	 	  ;- del numerico = rehacer2
 NumpadDel::Run "calc.exe" 	  ;- del numerico = rehacer2
 
 ;============= Otras Funciones ======================================
