@@ -23,6 +23,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 !+Backspace::SendInput ^+z 		;Alt + shift + BackSpace = ctrl + shift + Z
 	
 !ñ::!Tab 		;Alt + l = Alt + Tab
+!q::@
+Alt & +::~
 
 
 +f9::SendInput, #v
@@ -85,6 +87,8 @@ Capslock::Shift 	;Caps Lock actua como Shift
 ::omg::Por todos los dioses
 ::omw::estoy en camino
 ::afk::alejado de la computadora
+::lb-::Linea Base
+::vobo::Visto Bueno
 
 
 
