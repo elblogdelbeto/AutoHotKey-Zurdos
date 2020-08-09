@@ -27,10 +27,10 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 Alt & +::~
 
 
-+f9::SendInput, #v
-+f10::SendInput, ^f
-+f11::SendInput, ^a
-+f12::SendInput, ^s
+^f9::SendInput, #v
+^f10::SendInput, ^f
+^f11::SendInput, ^a
+^f12::SendInput, ^s
 
 ;+f9::SendInput, {f9}
 ;+f10::SendInput, {f10}
@@ -42,22 +42,30 @@ Pause::#e	; teclaPausa = abrir exolorador de carpetas
 
 NumpadIns::Tab	;numero 0 del numerico sea Tab
 
-NumpadEnd::+#Left   ;numero 1 del numerico = mover ventana a monitor izquierdo
+NumpadEnd::#Left   ;numero 1 del numerico = mover ventana a monitor izquierdo
 NumpadDown::#Down  ;numero 2 del numerico = win + abajo
-NumpadPgDn::+#Right  ;numero 3 del numerico =  mover ventana a monitor izquierdo
+NumpadPgDn::#Right  ;numero 3 del numerico =  mover ventana a monitor derecho
 
-NumpadLeft::#^Left	;numero 4 del numerico =
-NumpadClear::#Tab	;numero 5 del numerico = 
-NumpadRight::#^Right 	;numero 6 del numerico= 
+NumpadLeft::+#Left	;numero 4 del numerico =
+NumpadClear::#Up	;numero 5 del numerico = 
+NumpadRight::+#Right 	;numero 6 del numerico= 
 
 NumpadHome::^+Tab	;numero 7 del numerico = ctrl + shift + tab = moverse entre tabs atras
 NumpadUp::^!Tab		;numero 8 del numerico = 					
 NumpadPgUP::^Tab	;numero 9 del numerico = ctrl + tab = moverse entre tabs enfrente
 	
 NumpadDiv::Run "Chrome.exe"	  ;/ del numerico = deshacer
-NumpadMult::Run "Chrome.exe"	  ;* del numerico = rehacer
-NumpadSub::Run Notepad	 	  ;- del numerico = rehacer2
-NumpadDel::Run "calc.exe" 	  ;- del numerico = rehacer2
+
+NumpadMult:: 
+{
+Send, ^c
+Sleep 50
+Run, http://www.google.com/search?q=%clipboard%
+Return
+} ;* del numerico = rehacer
+	  	
+NumpadSub::Run Notepad		;- del numerico
+NumpadDel::Run "calc.exe" 	;. del numerico = rehacer2
 
 ;============= Otras Funciones ======================================
 
