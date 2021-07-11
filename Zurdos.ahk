@@ -46,22 +46,27 @@ NumpadHome::^a		;seleccionar todo
 NumpadUp::^f		; buscar
 NumpadPgUP::^h		;reemplazar
 
-NumpadIns & NumpadEnd::Run Notepad	;abrir notas
-NumpadIns & NumpadDown::Run "calc.exe" 	; 
-NumpadIns & NumpadPgDn::^v  		; 
-NumpadIns & NumpadLeft::^z		; 
-NumpadIns & NumpadClear::^y		; 
-NumpadIns & NumpadRight::^s 		; 
-NumpadIns & NumpadHome::^a		;
-NumpadIns & NumpadUp::^f		; 
-NumpadIns & NumpadPgUP::^h		;
+NumpadIns & NumpadEnd::Run Notepad		;abrir notas
+NumpadIns & NumpadDown::Run "calc.exe" 		; 
+NumpadIns & NumpadPgDn::Run "chrome.exe"	; 
+NumpadIns & NumpadLeft::Run "cmd"		; 
+NumpadIns & NumpadClear::Run "Powershell"	; 
+NumpadIns & NumpadRight::^s 			; 
+NumpadIns & NumpadHome::^a			;
+NumpadIns & NumpadUp::^f			; 
+NumpadIns & NumpadPgUP::^h			;
+NumpadIns & NumpadDiv:: 
+  	Run http://google.com
+ 	 Return
 NumpadIns & NumpadMult:: 
-{
-Send, ^c
-Sleep 50
-Run, http://www.google.com/search?q=%clipboard%
-Return
-} ;* del numerico = rehacer#
+	{
+	Send, ^c
+	Sleep 50
+	Run, http://www.google.com/search?q=%clipboard%
+	Return
+	} ;* del numerico
+NumpadIns & NumpadSub::Send ^+{Esc}
+
 
 #NumpadEnd::#Left   ;numero 1 del numerico = mover ventana a izquierda del monitor 
 #NumpadDown::#Down  ;numero 2 del numerico = (win + abajo) minimizar ventana
