@@ -77,7 +77,6 @@ NumpadIns & NumpadSub::Send ^+{Esc}
 #NumpadHome::^+Tab	;numero 7 del numerico = ctrl + shift + tab = moverse entre tabs atras
 #NumpadUp::^!Tab		;numero 8 del numerico = mostrar mosaico apps abiertas					
 #NumpadPgUP::^Tab	;numero 9 del numerico = ctrl + tab = moverse entre tabs enfrente
-
 	
 
 ;============= Otras Funciones ======================================
@@ -108,7 +107,6 @@ Capslock::Shift 	;Caps Lock actua como Shift
 
 ::wb::workbeat
 
-
 ;===================Deshabilitadas sin usar===================
 
 ;^,::^x				;ctrl+, = cortar
@@ -133,6 +131,3 @@ Capslock::Shift 	;Caps Lock actua como Shift
 ; Abrir Programas directo con tecla WIN ----------
 ;#n::Run Notepad  ;Win + n = abrir notepad
 ;#c::Run "calc.exe" ;Win + c = abrir calculadora
-
-
-
