@@ -35,6 +35,16 @@ LAlt & +::Send {U+007E} 		;Alt + + = ~
 !}::Send {U+0060}			;Alt + } = `
  
 
+^!c::Run "calc.exe" 
+^!n::Run "Notepad.exe" 
+^!g::Run "chrome.exe" 
+^!e::Run "msedge.exe"
+^!m::Run "D:\alberto\Desktop\Correo"
+^!p::Run "mspaint.exe"
+^!t::Run "C:\Users\alberto\AppData\Roaming\Telegram Desktop\Telegram.exe" 
+^!v::Run "C:\Program Files\Microsoft VS Code\Code.exe"
+^!w::Run "WINWORD.EXE"
+
 
 NumpadEnd::^x		; cortar
 NumpadDown::^c		; copiar
@@ -85,6 +95,10 @@ Capslock::Shift 	;Caps Lock actua como Shift
 +Capslock::Capslock	;fijar mayusculas con ctrl + BloqMay
 				
 ^!SPACE:: Winset, Alwaysontop, , A ; ctrl + alt + space ventana activa Always on Top
+
+; Shift + Wheel for horizontal scrolling
++WheelDown::WheelRight
++WheelUp::WheelLeft
 
 
 ;===================Autocompletar Abreviaciones al escribir===================
