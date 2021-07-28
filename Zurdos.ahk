@@ -101,6 +101,18 @@ Capslock::Shift 	;Caps Lock actua como Shift
 +WheelUp::WheelLeft
 
 
+;==================Macros específicos en Programas============================
+
+#IfWinActive, ahk_exe notepad++.exe
+^1::
+Send, {Alt down}p{Alt up}
+Send, j
+Send, f
+
+
+
+
+
 ;===================Autocompletar Abreviaciones al escribir===================
 
 ::nsfw::nsfw (No es apto para verlo en el trabajo)
